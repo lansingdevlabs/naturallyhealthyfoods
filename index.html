@@ -5,34 +5,44 @@
 		<title>Naturally Healthy Foods</title>
 		<link href="css/bootstrap.css" rel="stylesheet" />
 		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0.beta6/handlebars.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.pre/ember-1.0.pre.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		
 	</head>
 	<body>
-		<div class="container-fluid">
-			<div class="row-fluid">
-				<div class="span12">
-					<div class="hero-unit">
-						<div class="page-header">
-							<h1>Naturally <small>Healthy Foods</small></h1>
-							<em>"Providing Lansing with healthier snack alternatives...or something along those lines."</em>
+		<script type="text/x-handlebars" data-template-name="applicationTemplate">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="hero-unit">
+							<div class="page-header">
+								<h1>Naturally <small>Healthy Foods</small></h1>
+								<em>"Providing Lansing with healthier snack alternatives...or something along those lines."</em>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row-fluid">
-				<div class="span12">
-					<div class="navbar">
-						<div class="navbar-inner">
-							<!-- <a class="brand" href="#">Naturally Healthy Foods</a> -->
-							<ul class="nav">
-								<li class="active"><a href="#">Home</a></li>
-								<li><a href="#">About</a></li>
-								<li><a href="#">Products</a></li>
-								<li><a href="#">Contact</a></li>
-							</ul>
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="navbar">
+							<div class="navbar-inner">
+								<!-- <a class="brand" href="#">Naturally Healthy Foods</a> -->
+								<ul class="nav">
+									<li class="active"><a href="#">Home</a></li>
+									<li><a {{action "goAbout" href="true"}}>About</a></li>
+									<li><a {{action "goProducts" href="true"}}>Products</a></li>
+									<li><a {{action "goContact" href="true"}}>Contact</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+				{{outlet}}
+			</div>	
+		</script>
+		<script type="text/x-handlebars" data-template-name="homeTemplate">
 			<div class="row-fluid">
 				<div class="span8">
 					<h2>Home</h2>
@@ -57,8 +67,32 @@
 					</ul>
 				</div>
 			</div>
-		</div>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		</script>
+		<script type="text/x-handlebars" data-template-name="aboutTemplate">
+			<div class="row-fluid">
+				<div class="span12">
+					<h2>About</h2>
+					<p>TODO: about content goes here</p>
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars" data-template-name="productsTemplate">
+			<div class="row-fluid">
+				<div class="span12">
+					<h2>Products</h2>
+					<p>TODO: products content goes here</p>
+				</div>
+			</div>
+		</script>
+		<script type="text/x-handlebars" data-template-name="contactTemplate">
+			<div class="row-fluid">
+				<div class="span12">
+					<h2>Contact</h2>
+					<p>TODO: contact content goes here</p>
+				</div>
+			</div>
+		</script>
+
+		<script src="js/app/app.js"></script>
 	</body>
 </html>
