@@ -1,3 +1,25 @@
+@font-face {
+  font-family: 'WalkwaySemiBoldRegular';
+  src: url('font/Walkway_SemiBold-webfont.eot');
+  src: url('font/Walkway_SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('font/Walkway_SemiBold-webfont.woff') format('woff'),
+       url('font/Walkway_SemiBold-webfont.ttf') format('truetype'),
+       url('font/Walkway_SemiBold-webfont.svg#WalkwaySemiBoldRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.page-header {
+  font-family: 'WalkwaySemiBoldRegular', Arial, sans-serif;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.hero-unit {
+    margin-bottom: 0;
+    padding: 20px;
+}
+
 .navbar-inner {
   min-height: 40px;
   padding-left: 20px;
@@ -24,5 +46,7 @@
 	height: 75px;
 	margin: -15px 0 0 0;
 	padding: 0;
-	background: url("/img/blueberry.png");
+	background: url("../img/blueberry.png");
 }
+
+
