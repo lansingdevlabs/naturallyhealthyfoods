@@ -31,13 +31,22 @@
 					<div class="span12">
 						<div class="navbar">
 							<div class="navbar-inner">
-								<a class="brand" href="#"><title>Naturally Healthy Vending</title></a>
-								<ul class="nav">
-									<!--li class="active"><a href="#">Home</a></li-->
-									<li><a {{action "goAbout" href="true"}}>About</a></li>
-									<li><a {{action "goProducts" href="true"}}>Products</a></li>
-									<li><a {{action "goContact" href="true"}}>Contact</a></li>
-								</ul>
+								<div class="container">
+									<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        								<span class="icon-bar"></span>
+        								<span class="icon-bar"></span>
+        								<span class="icon-bar"></span>
+								    </a>
+									<a class="brand" href="#"><title>Naturally Healthy Vending</title></a>
+									<div class="nav-collapse">
+										<ul class="nav">
+											<!--li class="active"><a href="#">Home</a></li-->
+											<li><a {{action "goAbout" href="true"}}>About</a></li>
+											<li><a {{action "goProducts" href="true"}}>Products</a></li>
+											<li><a {{action "goContact" href="true"}}>Contact</a></li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
