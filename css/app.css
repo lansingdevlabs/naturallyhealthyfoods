@@ -11,6 +11,13 @@
 
 .page-header {
   font-family: 'WalkwaySemiBoldRegular', Arial, sans-serif;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.hero-unit {
+    margin: 1px 0;
+    padding: 20px;
 }
 
 .navbar-inner {
@@ -39,5 +46,7 @@
 	height: 75px;
 	margin: -18px 0 -18px 0;
 	padding: 0;
-	background: url("/img/blueberry.png");
+	background: url("../img/blueberry.png");
 }
+
+
