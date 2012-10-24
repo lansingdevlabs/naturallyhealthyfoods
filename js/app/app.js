@@ -54,24 +54,28 @@ App.Router =  Em.Router.extend({
 			route: "/",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("home");
+				$(".nav-collapse").collapse('hide');
 			}
 		}),
 		about: Em.Route.extend({
 			route: "/about",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("about");
+				$(".nav-collapse").collapse('hide');
 			}
 		}),
 		products: Em.Route.extend({
 			route: "/products",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("products");
+				$(".nav-collapse").collapse('hide');
 			}
 		}),
 		contact: Em.Route.extend({
 			route: "/contact",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("contact");
+				$(".nav-collapse").collapse('hide');
 			}
 		})
 	})
