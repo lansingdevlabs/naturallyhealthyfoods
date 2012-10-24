@@ -111,17 +111,21 @@
   padding: 5px 0 0 0;
 }
 
-.popchip_favicon, .favicon{
+.favicon-link {
+  padding: 0 0 0 20px;
+}
+
+.popchip-favicon, .favicon{
   background: url(../img/favicon_sprite.png) no-repeat;
 }
 
-.popchip_favicon{
+.popchip-favicon{
   background-position: 0 0;
   width: 16px;
   height: 16px;
 }
 
-.clifbar_favicon {
+.clifbar-favicon {
   background-position: 0 -16px ;
   width: 16px;
   height: 16px;
