@@ -16,8 +16,8 @@
 }
 
 .hero-unit {
+  margin: 1px 0;
   padding: 20px 20px 0 20px;
-  margin-bottom: 0px;
 }
 
 .hero-unit a:hover {
@@ -30,22 +30,7 @@
 }
 
 .hero-unit .tagline {
-  margin: 0 0 0 85px;
-  color: #414F66;
-  font-weight: bold;
-
-}
-
-.hero-unit a:hover {
-  text-decoration: none;
-  color: #5E718F;
-}
-
-.hero-unit h1 {
-  margin: 0 0 20px 0;
-}
-
-.hero-unit .tagline {
+  display: block;
   margin: 0 0 0 85px;
   color: #414F66;
   font-weight: bold;
