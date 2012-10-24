@@ -10,8 +10,8 @@ App.HomeView = Em.View.extend({
 	templateName: "homeTemplate"
 });
 
-App.MissionView = Em.View.extend({
-	templateName: "missionTemplate"
+App.MachineView = Em.View.extend({
+	templateName: "machineTemplate"
 });
 
 App.ProductsView = Em.View.extend({
@@ -31,7 +31,7 @@ App.HomeController = Em.Controller.extend({
 
 });
 
-App.MissionController = Em.Controller.extend({
+App.MachineController = Em.Controller.extend({
 
 });
 
@@ -47,7 +47,7 @@ App.ContactController = Em.Controller.extend({
 App.Router =  Em.Router.extend({
 	root: Em.Route.extend({
 		goHome: Em.Route.transitionTo("home"),
-		goMission: Em.Route.transitionTo("mission"),
+		goMachine: Em.Route.transitionTo("machine"),
 		goProducts: Em.Route.transitionTo("products"),
 		goContact: Em.Route.transitionTo("contact"),
 		home: Em.Route.extend({
@@ -57,10 +57,10 @@ App.Router =  Em.Router.extend({
 				$(".nav-collapse").collapse('hide');
 			}
 		}),
-		mission: Em.Route.extend({
-			route: "/mission",
+		machine: Em.Route.extend({
+			route: "/the-machine",
 			connectOutlets: function (router, context) {
-				router.get("applicationController").connectOutlet("mission");
+				router.get("applicationController").connectOutlet("machine");
 				$(".nav-collapse").collapse('hide');
 			}
 		}),
