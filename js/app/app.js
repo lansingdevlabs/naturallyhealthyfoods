@@ -10,8 +10,8 @@ App.HomeView = Em.View.extend({
 	templateName: "homeTemplate"
 });
 
-App.AboutView = Em.View.extend({
-	templateName: "aboutTemplate"
+App.MissionView = Em.View.extend({
+	templateName: "missionTemplate"
 });
 
 App.ProductsView = Em.View.extend({
@@ -31,7 +31,7 @@ App.HomeController = Em.Controller.extend({
 
 });
 
-App.AboutController = Em.Controller.extend({
+App.MissionController = Em.Controller.extend({
 
 });
 
@@ -47,7 +47,7 @@ App.ContactController = Em.Controller.extend({
 App.Router =  Em.Router.extend({
 	root: Em.Route.extend({
 		goHome: Em.Route.transitionTo("home"),
-		goAbout: Em.Route.transitionTo("about"),
+		goMission: Em.Route.transitionTo("mission"),
 		goProducts: Em.Route.transitionTo("products"),
 		goContact: Em.Route.transitionTo("contact"),
 		home: Em.Route.extend({
@@ -57,10 +57,10 @@ App.Router =  Em.Router.extend({
 				$(".nav-collapse").collapse('hide');
 			}
 		}),
-		about: Em.Route.extend({
-			route: "/about",
+		mission: Em.Route.extend({
+			route: "/mission",
 			connectOutlets: function (router, context) {
-				router.get("applicationController").connectOutlet("about");
+				router.get("applicationController").connectOutlet("mission");
 				$(".nav-collapse").collapse('hide');
 			}
 		}),
