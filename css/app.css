@@ -110,3 +110,24 @@
 .nav-collapse.in.collapse {
   padding: 5px 0 0 0;
 }
+
+.favicon-link {
+  padding: 0 0 0 20px;
+}
+
+.popchip-favicon, .favicon{
+  background: url(../img/favicon_sprite.png) no-repeat;
+}
+
+.popchip-favicon{
+  background-position: 0 0;
+  width: 16px;
+  height: 16px;
+}
+
+.clifbar-favicon {
+  background-position: 0 -16px ;
+  width: 16px;
+  height: 16px;
+}
+
