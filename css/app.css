@@ -16,8 +16,8 @@
 }
 
 .hero-unit {
-    margin: 1px 0;
-    padding: 20px 20px 0 20px;
+  padding: 20px 20px 0 20px;
+  margin-bottom: 0px;
 }
 
 .hero-unit a:hover {
@@ -34,6 +34,21 @@
   color: #414F66;
   font-weight: bold;
 
+}
+
+.hero-unit a:hover {
+  text-decoration: none;
+  color: #5E718F;
+}
+
+.hero-unit h1 {
+  margin: 0 0 20px 0;
+}
+
+.hero-unit .tagline {
+  margin: 0 0 0 85px;
+  color: #414F66;
+  font-weight: bold;
 }
 
 .navbar-inner {
@@ -60,9 +75,36 @@
 .navbar .brand {
 	width: 75px;
 	height: 75px;
-	margin: -36px 0 -18px 0;
+    margin: -36px 0 -18px 0;
 	padding: 0;
 	background: url("../img/blueberry.png");
+}
+
+.product {
+    position: relative;
+}
+
+.product h3 {
+    position: absolute;
+    top: 0.5em;
+    left: 1.2em;
+    border: 1px solid #90BA3C;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: rgba(144, 186, 60, 0.4);
+    padding: 0 5px;
+    color: #3F4D62;
+}
+
+.product p {
+    padding: 10px 10px 0px 10px;
+}
+
+.product img {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
 
 .nav-collapse.in.collapse {
