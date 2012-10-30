@@ -1,11 +1,18 @@
 // create application
 App = Em.Application.create();
 
+// Collapses the mobile navigation menu.
+App.collapseNavigation = function () {
+	$(".nav-collapse").collapse('hide');
+	return true;
+};
+
+// Determines if the current app state matches the given view.
 App.isCurrentView = function (viewName) {
   return Ember.computed(function() {
     return App.router.currentState.name === viewName;
-  }).property('App.router.currentState');
-}
+  }).property("App.router.currentState");
+};
 
 App.ApplicationView = Em.View.extend({
 	templateName: "applicationTemplate"
@@ -62,32 +69,28 @@ App.Router =  Em.Router.extend({
 			route: "/",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("home");
-				$(".nav-collapse").collapse('hide');
-				return true;
+				App.collapseNavigation();
 			}
 		}),
 		machine: Em.Route.extend({
 			route: "/the-machine",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("machine");
-				$(".nav-collapse").collapse('hide');
-				return true;
+				App.collapseNavigation();
 			}
 		}),
 		products: Em.Route.extend({
 			route: "/products",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("products");
-				$(".nav-collapse").collapse('hide');
-				return true;
+				App.collapseNavigation();
 			}
 		}),
 		contact: Em.Route.extend({
 			route: "/contact",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("contact");
-				$(".nav-collapse").collapse('hide');
-				return true;
+				App.collapseNavigation();
 			}
 		})
 	})
