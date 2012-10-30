@@ -1,6 +1,12 @@
 // create application
 App = Em.Application.create();
 
+App.isCurrentView = function (viewName) {
+  return Ember.computed(function() {
+    return App.router.currentState.name === viewName;
+  }).property('App.router.currentState');
+}
+
 App.ApplicationView = Em.View.extend({
 	templateName: "applicationTemplate"
 });
@@ -24,7 +30,9 @@ App.ContactView = Em.View.extend({
 
 // controllers
 App.ApplicationController = Em.Controller.extend({
-
+	isMachine: App.isCurrentView("machine"),
+	isProducts: App.isCurrentView("products"),
+	isContact: App.isCurrentView("contact")
 });
 
 App.HomeController = Em.Controller.extend({
@@ -55,6 +63,7 @@ App.Router =  Em.Router.extend({
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("home");
 				$(".nav-collapse").collapse('hide');
+				return true;
 			}
 		}),
 		machine: Em.Route.extend({
@@ -62,6 +71,7 @@ App.Router =  Em.Router.extend({
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("machine");
 				$(".nav-collapse").collapse('hide');
+				return true;
 			}
 		}),
 		products: Em.Route.extend({
@@ -69,6 +79,7 @@ App.Router =  Em.Router.extend({
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("products");
 				$(".nav-collapse").collapse('hide');
+				return true;
 			}
 		}),
 		contact: Em.Route.extend({
@@ -76,6 +87,7 @@ App.Router =  Em.Router.extend({
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("contact");
 				$(".nav-collapse").collapse('hide');
+				return true;
 			}
 		})
 	})
@@ -83,4 +95,3 @@ App.Router =  Em.Router.extend({
 
 // initialize application
 App.initialize();
-
