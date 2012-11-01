@@ -1,12 +1,6 @@
 // create application
 App = Em.Application.create();
 
-// Collapses the mobile navigation menu.
-App.collapseNavigation = function () {
-	$(".nav-collapse").collapse('hide');
-	return true;
-};
-
 // Determines if the current app state matches the given view.
 App.isCurrentView = function (viewName) {
   return Ember.computed(function() {
@@ -14,11 +8,11 @@ App.isCurrentView = function (viewName) {
   }).property("App.router.currentState");
 };
 
+// views
 App.ApplicationView = Em.View.extend({
 	templateName: "applicationTemplate"
 });
 
-// views
 App.HomeView = Em.View.extend({
 	templateName: "homeTemplate"
 });
@@ -39,7 +33,10 @@ App.ContactView = Em.View.extend({
 App.ApplicationController = Em.Controller.extend({
 	isMachine: App.isCurrentView("machine"),
 	isProducts: App.isCurrentView("products"),
-	isContact: App.isCurrentView("contact")
+	isContact: App.isCurrentView("contact"),
+	collapseNavigation: function() {
+		$(".nav-collapse").collapse('hide');
+	}
 });
 
 App.HomeController = Em.Controller.extend({
@@ -69,28 +66,28 @@ App.Router =  Em.Router.extend({
 			route: "/",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("home");
-				App.collapseNavigation();
+				router.get("applicationController").collapseNavigation();
 			}
 		}),
 		machine: Em.Route.extend({
 			route: "/the-machine",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("machine");
-				App.collapseNavigation();
+				router.get("applicationController").collapseNavigation();
 			}
 		}),
 		products: Em.Route.extend({
 			route: "/products",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("products");
-				App.collapseNavigation();
+				router.get("applicationController").collapseNavigation();
 			}
 		}),
 		contact: Em.Route.extend({
 			route: "/contact",
 			connectOutlets: function (router, context) {
 				router.get("applicationController").connectOutlet("contact");
-				App.collapseNavigation();
+				router.get("applicationController").collapseNavigation();
 			}
 		})
 	})

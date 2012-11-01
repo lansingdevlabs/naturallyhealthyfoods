@@ -19,7 +19,7 @@
 				<div class="row-fluid">
 					<div class="span12">
 						<div class="hero-unit">
-							<div class="page-header">
+							<div class="page-header" {{action "collapseNavigation" target="controller"}}>
 								<a {{action "goHome" href="true"}}>
 									<h1>Naturally <small>Healthy Vending</small></h1>
 									<em class="tagline">"Lansing's healthier snack choice."</em>
@@ -38,13 +38,15 @@
         								<span class="icon-bar"></span>
         								<span class="icon-bar"></span>
 								    </a>
-									<a class="brand" href="#"><title>Naturally Healthy Vending</title></a>
+									<div {{action "collapseNavigation" target="controller"}}>
+										<a class="brand" href="#" {{action "goHome" href="true"}}><title>Naturally Healthy Vending</title></a>
+									</div>
 									<div class="nav-collapse">
 										<ul class="nav">
 											<!--li class="active"><a href="#">Home</a></li-->
-											<li {{bindAttr class="isMachine:active"}}><a {{action "goMachine" href="true"}}>The Machine</a></li>
-											<li {{bindAttr class="isProducts:active"}}><a {{action "goProducts" href="true"}}>Products</a></li>
-											<li {{bindAttr class="isContact:active"}}><a {{action "goContact" href="true"}}>Contact</a></li>
+											<li {{bindAttr class="isMachine:active"}}{{action "collapseNavigation" target="controller"}}><a {{action "goMachine" href="true"}}>The Machine</a></li>
+											<li {{bindAttr class="isProducts:active"}}{{action "collapseNavigation" target="controller"}}><a {{action "goProducts" href="true"}}>Products</a></li>
+											<li {{bindAttr class="isContact:active"}}{{action "collapseNavigation" target="controller"}}><a {{action "goContact" href="true"}}>Contact</a></li>
 										</ul>
 									</div>
 								</div>
