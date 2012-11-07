@@ -103,15 +103,17 @@
 			<div class="row-fluid">
 				<div class="span12">
 					<h2>Products</h2>
-					<p>TODO: products content goes here</p>
-				</div>
+					{{#each App.router.productsController}}
+						{{template productTemplate}}
+					{{/each}}
 			</div>
 		</script>
-		<script type="text/x-handlebars" data-template-name="contactTemplate">
-			<div class="row-fluid">
-				<div class="span12">
-					<h2>Contact</h2>
-					<p>TODO: contact content goes here</p>
+		<script type="text/x-handlebars" data-template-name="productTemplate">
+			<div class="product-container row-fluid">
+				<a {{bindAttr href="url"}} class=" span1"><div {{bindAttr class="spriteClass"}}></div></a>
+				<div class="product-description span11">
+					<h4><a {{bindAttr href="url"}}>{{name}}</a></h4>
+					<p>{{description}}</p>
 				</div>
 			</div>
 		</script>

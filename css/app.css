@@ -116,3 +116,89 @@
   height: 16px;
 }
 
+.annies-homegrown, .brothers-all-natural, .clif-bar, .clif-mojo-bar, .clif-twisted-fruit, .clif-z-bar, .glaceau-vitamin-water, .kashi-tlc-crunchy-granola-bar, .luna-bar, .materne-gogo-squeez, .stacys-all-natural-pita-chips, .stretch-island-fruit-leather, .v8-fusion{
+  margin: auto;
+  background: url(../img/products.png) no-repeat;
+}
+
+.annies-homegrown{
+  background-position: 0 0;
+  width: 66px;
+  height: 100px;
+}
+
+.brothers-all-natural{
+  background-position: -100px 0;
+  width: 100px;
+  height: 80px;
+}
+
+.clif-bar{
+  background-position: -200px 0;
+  width: 65px;
+  height: 100px;
+}
+
+.clif-mojo-bar{
+  background-position: -300px 0;
+  width: 62px;
+  height: 100px;
+}
+
+.clif-twisted-fruit{
+  background-position: -400px 0;
+  width: 62px;
+  height: 100px;
+}
+
+.clif-z-bar{
+  background-position: 0 -150px ;
+  width: 100px;
+  height: 45px;
+}
+
+.glaceau-vitamin-water{
+  background-position: -100px -150px ;
+  width: 100px;
+  height: 100px;
+}
+
+.kashi-tlc-crunchy-granola-bar{
+  background-position: -200px -150px ;
+  width: 96px;
+  height: 100px;
+}
+
+.luna-bar{
+  background-position: -300px -150px ;
+  width: 100px;
+  height: 47px;
+}
+
+.materne-gogo-squeez{
+  background-position: 0 -250px ;
+  width: 67px;
+  height: 100px;
+}
+
+.stacys-all-natural-pita-chips{
+  background-position: -100px -250px ;
+  width: 65px;
+  height: 100px;
+}
+
+.stretch-island-fruit-leather{
+  background-position: -200px -250px ;
+  width: 41px;
+  height: 100px;
+}
+
+.v8-fusion{
+  background-position: -300px -250px ;
+  width: 45px;
+  height: 100px;
+}
+
+.product-container {
+  margin: 30px 0;
+}
