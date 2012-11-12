@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Naturally Healthy Foods</title>
 		<link href="css/bootstrap.css" rel="stylesheet" />
@@ -110,8 +111,8 @@
 		</script>
 		<script type="text/x-handlebars" data-template-name="productTemplate">
 			<div class="product-container row-fluid">
-				<a {{bindAttr href="url"}} class=" span1"><div {{bindAttr class="spriteClass"}}></div></a>
-				<div class="product-description span11">
+				<a {{bindAttr href="url"}} class=" span2"><div {{bindAttr class="spriteClass"}}></div></a>
+				<div class="product-description span10">
 					<h4><a {{bindAttr href="url"}}>{{name}}</a></h4>
 					<p>{{description}}</p>
 				</div>
