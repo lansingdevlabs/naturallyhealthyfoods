@@ -7,11 +7,12 @@
 		<link href="css/bootstrap.css" rel="stylesheet" />
 		<link href="css/bootstrap-responsive.css" rel="stylesheet"	 />
 		<link href="css/app.css" rel="stylesheet" />
+        <link href='http://fonts.googleapis.com/css?family=Kite+One' rel='stylesheet' type='text/css'>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0.beta6/handlebars.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.pre/ember-1.0.pre.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		
+
 	</head>
     <link rel="icon" type="image/png" href="http://www.naturallyhealthyvending.com/favicon.ico">
 	<body>
@@ -23,7 +24,7 @@
 							<div class="page-header" {{action "collapseNavigation" target="controller"}}>
 								<a {{action "goHome" href="true"}}>
 									<h1 class="span12">Naturally <small>Healthy Vending</small></h1>
-									<em class="tagline">"Lansing's healthier snack choice."</em>
+									<em class="tagline familiar">"Lansing's healthier snack choice."</em>
 								</a>
 							</div>
 						</div>
@@ -56,32 +57,43 @@
 					</div>
 				</div>
 				{{outlet}}
-			</div>
+			    <div class="row-fluid footer familiar">
+                    Providing you better access to healthier food choices. Snack with us!
+                </div>
+            </div>
 		</script>
+
 		<script type="text/x-handlebars" data-template-name="homeTemplate">
 			<div class="row-fluid">
 				<div class="span8">
-					<h2>Home</h2>
-                    <p>Welcome to Naturally Healthy Foods - a healthy alternative to traditional vending
-                        machines. My mission is to provide people better access to healthier food choices. I
+					<h2>Welcome Home</h2>
+                    <p class="familiar">
+                        Naturally Healthy Foods is a healthy alternative to traditional vending
+                        machines.
+                    </p>
+                    <p class="familiar">
+                        My mission is to provide people better access to healthier food choices. I
                         work with each location to customize your vending choices with great tasting, healthier
-                        alternatives to the traditional vending options ﬁlled with soda and candy. I believe that
-                        small changes - such as replacing greasy potato chips with pop chips - can make a big
-                        difference over time. Take a look around the website, see the state of the art vending
+                        alternatives to the traditional vending options of soda and candy. I believe that
+                        small changes - such as replacing greasy potato chips with
+                        <a href="http://www.popchips.com/popchips/nutritional-facts/">PopChips</a>
+                        - can make a big difference over time. Take a look around the website, see the state of the art vending
                         machine, view a sampling of the products I offer, and give me a call when you’re ready
-                        to talk about placing a healthy vending machine in your place of business. I look forward
-                        to working with you!
+                        to talk about bringing a healthy vending machine into your place of business.
+                    </p>
+                    <p class="familiar">
+                        I look forward to working with you!
 					</p>
-                    <p>
+                    <p class="familiar">
                         - Bekah Zorgdrager
                     </p>
 				</div>
 				<div class="span4">
 					<ul class="thumbnails">
 						<li class="span12">
-                            <div class="thumbnail product">
+                            <div class="product">
                                 <h3>Good Eats</h3>
-                                <p><img src="img/perrier.jpg" /></p>
+                                <img class="img-enhance" src="img/perrier.jpg" />
                             </div>
 						</li>
 					</ul>
@@ -102,15 +114,47 @@
 				</div>
 			</div>
 		</script>
-		<script type="text/x-handlebars" data-template-name="machineTemplate">
+
+        <script type="text/x-handlebars" data-template-name="machineTemplate">
 			<div class="row-fluid">
 				<div class="span12">
 					<h2>The Machine</h2>
-					<p>TODO: machine content goes here</p>
 				</div>
 			</div>
+            <div class="row-fluid">
+                <p class="span3"><img class="img-enhance" src="img/healthy_vending_machine.png"></p>
+                <div class="span9">
+                    <ul class="machineDescription">
+                        <li>
+                        <h4>Ease of Interaction</h4>
+                        <p class="familiar">With credit-cards and cash accepted stomachs all cheer!</p>
+                        </li>
+                        <li>
+                        <h4>Simplicity Achieved</h4>
+                        <p class="familiar">
+                            One machine to fit your needs. With up to 16 different snacks slots &
+                            6 different drink slots, appetites are satisfied.
+                        </p>
+                        </li>
+                        <li>
+                        <h4>Going Green!</h4>
+                        <p class="familiar">
+                            Energy Efficient LED at it's best. Imagine this, a whole vending machine running
+                            at the energy cost of a 100 watt light bulb.
+                        </p>
+                        </li>
+                        <li>
+                        <h4>The Specs</h4>
+                        <p class="familiar">
+                            30.5" wide x 28.5" deep x 69.5" tall. Good food comes in small packages.
+                        </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 		</script>
-		<script type="text/x-handlebars" data-template-name="productsTemplate">
+
+        <script type="text/x-handlebars" data-template-name="productsTemplate">
 			<div class="row-fluid">
 				<div class="span12">
 					<h2>Products</h2>
@@ -119,15 +163,37 @@
 					{{/each}}
 			</div>
 		</script>
+
 		<script type="text/x-handlebars" data-template-name="productTemplate">
 			<div class="product-container row-fluid">
 				<a {{bindAttr href="url"}} class=" span2"><div {{bindAttr class="spriteClass"}}></div></a>
 				<div class="product-description span10">
 					<h4><a {{bindAttr href="url"}}>{{name}}</a></h4>
-					<p>{{description}}</p>
+					<p class="familiar">{{description}}</p>
 				</div>
 			</div>
 		</script>
+
+        <script type="text/x-handlebars" data-template-name="contactTemplate">
+            <div class="row-fluid">
+                <div class="span12">
+                    <h2>Contact Us</h2>
+                    <div class="thumbnail card span6 img-enhance">
+                        <div>
+                            <h3>Naturally <small>Healthy Vending</small></h3>
+                            <em class="tagline familiar">"Lansing's healthier snack choice."</em>
+                        </div>
+                        <p>
+                            <span>Bekah & Kamren Zorgdrager</span>
+                            <br>
+                            <a href="tel:(616) 730-2183">(616) 730-2183</a>
+                            <br>
+                            <a href="mailto:NaturallyHealthyFoods@gmail.com">NaturallyHealthyFoods@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </script>
 
 		<script src="js/app/app.js"></script>
 	</body>

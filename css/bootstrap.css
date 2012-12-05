@@ -142,8 +142,11 @@ body {
   background-color: #fbfbfc;
 }
 a {
-  color: #5e718f;
-  text-decoration: none;
+  color: #90BA3C;
+}
+a[href ^="mailto:"], a[href ^="tel:"], h4 a {
+    color: #5e718f;
+    text-decoration: none;
 }
 a:hover {
   color: #404d61;

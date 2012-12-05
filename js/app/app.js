@@ -39,6 +39,7 @@ App.ApplicationController = Em.Controller.extend({
 	isProducts: App.isCurrentView("products"),
 	isContact: App.isCurrentView("contact"),
 	collapseNavigation: function() {
+        console.info("hiding");
 		$(".nav-collapse").collapse('hide');
 	}
 });
@@ -62,7 +63,7 @@ App.ProductsController = Em.ArrayController.extend({
 	content: [
 		App.Product.create({
 			name: "Annie's Homegrown Cheddar Bunnies",
-			description: "Baked with organic wheat flour and Real Aged Cheddar, our Cheddar Bunnies are great tasting and wholesome. They are ideal for toddler-sized hands, but their crispy crunch and real cheesy flavor will tempt snackers of all ages to eat them by the handful.",
+			description: "Baked with organic wheat flour and Real Aged Cheddar, these Cheddar Bunnies are great tasting and wholesome. They are ideal for toddler-sized hands, but their crispy crunch and real cheesy flavor will tempt snackers of all ages to eat them by the handful.",
 			url: "http://www.annies.com/",
 			spriteClass: "annies-homegrown"
 		}),
@@ -105,7 +106,7 @@ App.ProductsController = Em.ArrayController.extend({
 		}),
 		App.Product.create({
 			name: "Kashi TLC Cruncy Granola Bar",
-			description: "Treat yourself to some tender loving care ... Tasty Little Crunchies granola bars. Starting with a unique combination of Seven Whole Grains and Sesame, and bake them up with the wholesome goodness of roasted nuts, whole seeds, and warm spices. And with 4g of Fiber and 6-7g of Protein, our crunchy granola bars are as nourishing as they are tasty.",
+			description: "Treat yourself to some tender loving care ... Tasty Little Crunchies granola bars. Starting with a unique combination of Seven Whole Grains and Sesame, and bake them up with the wholesome goodness of roasted nuts, whole seeds, and warm spices. And with 4g of Fiber and 6-7g of Protein, these crunchy granola bars are as nourishing as they are tasty.",
 			url: "http://www.kashi.com/",
 			spriteClass: "kashi-tlc-crunchy-granola-bar"
 		}),
@@ -117,7 +118,7 @@ App.ProductsController = Em.ArrayController.extend({
 		}),
 		App.Product.create({
 			name: "Materne GoGo Squeez",
-			description: "100% natural fruits meet our signature innovative packaging to bring you a healthy snack even the busiest of families can enjoy—anytime, anywhere.",
+			description: "100% natural fruits meet these signature innovative packaging to bring you a healthy snack even the busiest of families can enjoy—anytime, anywhere.",
 			url: "http://www.gogosqueez.com/",
 			spriteClass: "materne-gogo-squeez"
 		}),
@@ -185,4 +186,6 @@ App.Router =  Em.Router.extend({
 });
 
 // initialize application
-App.initialize();
+$(function() {
+    App.initialize();
+})
